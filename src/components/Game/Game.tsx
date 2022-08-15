@@ -7,10 +7,10 @@ import Result from "../Result/Result";
 const Game: React.FC = () => {
   const { state, onCardClick, haveWon, playAgain } = useGame();
 
-  const { cards } = state;
+  const { cards, moves } = state;
 
   if (haveWon) {
-    return <Result playAgain={playAgain} />;
+    return <Result playAgain={playAgain} moves={moves} />;
   }
 
   return (

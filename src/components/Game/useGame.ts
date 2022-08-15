@@ -5,7 +5,7 @@ import gameCards, { Card as ICard } from "./cards";
 const newGame = () => {
   const cards = [...gameCards].sort(() => Math.random() - 0.5);
 
-  return { cards };
+  return { cards, moves: 0 };
 };
 
 const useGame = () => {
@@ -32,6 +32,7 @@ const useGame = () => {
               status: c.status === "guessed-wrong" ? "pickable" : c.status,
             };
           }),
+          moves: prev.moves + 1,
         };
       }
 
