@@ -22,10 +22,6 @@ const useGame = () => {
           ...prev,
           cards: prev.cards.map((c) => {
             if ([card.id, selectedCard.id].includes(c.id)) {
-
-
-
-
               return {
                 ...c,
                 status: guessedRight ? "guessed" : "guessed-wrong",
@@ -54,13 +50,17 @@ const useGame = () => {
     });
   };
 
-  let haveWon = false
+  let haveWon = false;
 
-  if (state.cards.every((c)=> c.status==='guessed')){
-    haveWon = true
+  if (state.cards.every((c) => c.status === "guessed")) {
+    haveWon = true;
   }
 
-  return { state, onCardClick, haveWon };
+  const playAgain = () => {
+    setState(newGame());
+  };
+
+  return { state, onCardClick, haveWon, playAgain };
 };
 
 export default useGame;

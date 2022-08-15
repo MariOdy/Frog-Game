@@ -3,7 +3,11 @@ import "./Result.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 
-const Result: React.FC = () => {
+interface ResultProps {
+  playAgain: () => any;
+}
+
+const Result: React.FC<ResultProps> = ({ playAgain }) => {
   const { width, height } = useWindowSize();
 
   return (
@@ -11,7 +15,7 @@ const Result: React.FC = () => {
       <Confetti width={width} height={height} />
       <h3>You win!</h3>
       <img src="./images/frog.png" alt="" />
-      <button>Play again</button>
+      <button onClick={playAgain}>Play again</button>
     </section>
   );
 };

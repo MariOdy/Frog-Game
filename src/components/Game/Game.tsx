@@ -5,19 +5,15 @@ import useGame from "./useGame";
 import Result from "../Result/Result";
 
 const Game: React.FC = () => {
-  const { state, onCardClick, haveWon } = useGame();
+  const { state, onCardClick, haveWon, playAgain } = useGame();
 
   const { cards } = state;
 
-  if(haveWon){
-    return(<Result />)
-    
+  if (haveWon) {
+    return <Result playAgain={playAgain} />;
   }
 
-
-
   return (
-    
     <section className="Game container">
       <ul className="all-cards">
         {cards.map((card) => (
