@@ -1,0 +1,52 @@
+.Frog {
+  flex-direction: column;
+  gap: 50px;
+  background-color: #c7ed77;
+}
+.Frog .rules{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 300px;
+}
+.rules h3{
+  font-size: 30px;
+}
+.rules p{
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+.choose-btn {
+  display: flex;
+  justify-content: center;
+}
+.Frog .choose-btn button {
+  background-color: #ffff;
+  color: #000000;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+}
+.Frog img {
+  width: 400px;
+  height: 400px;
+}
+
+.relative {
+  position: relative;
+}
+
+.happy-frog {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.happy-frog:hover{
+  opacity: 1;
+}
+

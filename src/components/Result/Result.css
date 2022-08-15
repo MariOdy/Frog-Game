@@ -1,0 +1,17 @@
+.Result{
+    flex-direction: column;
+    gap: 40px;
+}
+.Result h3{
+    font-size: 70px;
+}
+.Result img{
+    width: 300px;
+    height: 300px;
+}
+.Result button{
+    font-size: 30px;
+    width: 250px;
+    height: 70px;
+    background-color: #c7ed77;
+}
